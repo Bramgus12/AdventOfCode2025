@@ -27,9 +27,9 @@ export async function AppSidebar() {
             <SidebarContent>
                 <SidebarGroup>
                     <SidebarGroupLabel>
-                        <span className="text-lg font-sans">
+                        <Link href="/" className="text-lg font-sans">
                             Advent of code 2025
-                        </span>
+                        </Link>
                     </SidebarGroupLabel>
                     <SidebarGroupContent>
                         <SidebarMenu>
