@@ -68,7 +68,6 @@ export default function Challenge2() {
             <FileInput
                 label="Upload File"
                 onChange={async (file) => {
-                    console.log(file);
                     const fileResult = await checkFileContent(file);
                     if (fileResult._tag === "Failure") {
                         setFileState({ isValid: false });
