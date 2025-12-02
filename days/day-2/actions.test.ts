@@ -31,6 +31,6 @@ describe("completeChallenge2", () => {
     it("should have have the right output", async () => {
         const fileContent = "1032-2599";
         const result = await completeChallenge2(fileContent);
-        expect(result).toEqual(1212 + 2323);
+        expect(result).toEqual(27270);
     });
 });
