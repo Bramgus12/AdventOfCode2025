@@ -30,6 +30,10 @@ const items = [
         title: "Day 4",
         url: "/days/day-4",
     },
+    {
+        title: "Day 5",
+        url: "/days/day-5",
+    },
 ];
 
 export async function AppSidebar() {
