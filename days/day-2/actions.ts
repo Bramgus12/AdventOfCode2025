@@ -63,7 +63,6 @@ function checkRangeChallenge2(range: Range): Array<number> {
             results.push(i);
         }
     }
-    console.log(results);
     return results;
 }
 
