@@ -49,8 +49,6 @@ function getLargestCombinationForChallenge2(batteryPack: Array<number>): number 
         result: string;
     }>(
         (acc, _, index) => {
-            console.log(acc);
-
             if (acc.result.length >= 12) {
                 return acc;
             }
@@ -75,8 +73,6 @@ function getLargestCombinationForChallenge2(batteryPack: Array<number>): number 
         },
         { lastNumberIndex: -1, result: "" },
     );
-
-    console.log(largestNumber);
 
     return Number(largestNumber.result);
 }
