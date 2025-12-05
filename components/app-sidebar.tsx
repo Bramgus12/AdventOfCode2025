@@ -15,23 +15,23 @@ import ThemeToggle from "./theme-toggle";
 // Menu items.
 const items = [
     {
-        title: "Day 1",
+        title: "Day 1 - Safe Cracking",
         url: "/days/day-1",
     },
     {
-        title: "Day 2",
+        title: "Day 2 - Repeating Numbers",
         url: "/days/day-2",
     },
     {
-        title: "Day 3",
+        title: "Day 3 - Batteries",
         url: "/days/day-3",
     },
     {
-        title: "Day 4",
+        title: "Day 4 - Paper Rolls",
         url: "/days/day-4",
     },
     {
-        title: "Day 5",
+        title: "Day 5 - Inventory Management",
         url: "/days/day-5",
     },
 ];
