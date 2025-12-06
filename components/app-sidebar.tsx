@@ -34,6 +34,10 @@ const items = [
         title: "Day 5 - Inventory Management",
         url: "/days/day-5",
     },
+    {
+        title: "Day 6 - Math Homework",
+        url: "/days/day-6",
+    },
 ];
 
 export async function AppSidebar() {
