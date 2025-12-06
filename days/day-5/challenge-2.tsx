@@ -7,7 +7,41 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { AlertCircleIcon } from "lucide-react";
 import { completeChallenge2 } from "@/days/day-5/actions";
 
-const schema = z.string();
+const schema = z.string().refine((value) => {
+    const sections = value.split("\n\n");
+
+    if (sections.length !== 2) {
+        return false;
+    }
+
+    const rangeLines = sections[0].split("\n");
+    const idLines = sections[1].split("\n").filter((id) => id.trim().length > 0);
+
+    const rangeRegex = /^\d+-\d+$/;
+    const idRegex = /^\d+$/;
+
+    // Validate range lines
+    for (const line of rangeLines) {
+        console.log("Validating range line:", line, rangeRegex.test(line.trim()));
+        if (!rangeRegex.test(line.trim())) {
+            return false;
+        }
+        const [start, end] = line.split("-").map(Number);
+        console.log("Parsed range:", start, end);
+        if (start > end) {
+            return false;
+        }
+    }
+
+    // Validate ID lines
+    for (const line of idLines) {
+        if (!idRegex.test(line.trim())) {
+            return false;
+        }
+    }
+
+    return true;
+});
 
 export default function Day5Challenge2() {
     const [fileState, setFileState] = useState<
