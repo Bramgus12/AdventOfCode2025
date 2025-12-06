@@ -22,12 +22,10 @@ const schema = z.string().refine((value) => {
 
     // Validate range lines
     for (const line of rangeLines) {
-        console.log("Validating range line:", line, rangeRegex.test(line.trim()));
         if (!rangeRegex.test(line.trim())) {
             return false;
         }
         const [start, end] = line.split("-").map(Number);
-        console.log("Parsed range:", start, end);
         if (start > end) {
             return false;
         }
